@@ -10,8 +10,10 @@ import com.example.postcard.R
 class PagerAdapter internal constructor(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager) {
     override fun getItem(p0: Int): Fragment? {
         val options = Options("here", R.drawable.place, 0)
+        val option2 = Options("This one", R.drawable.place, 1)
         val list = ArrayList<Options>()
         list.add(options)
+        list.add(option2)
         when(p0){
             0 -> return Fragment_questionnaire.newInstance("This is my question", list, 0)
             1 -> return Fragment_questionnaire.newInstance("This is my second question", list, 1)
